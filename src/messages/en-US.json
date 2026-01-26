@@ -32,5 +32,21 @@
   "portfolio_description": "We've partnered with visionary brands to build next-generation digital products. From local startups to global scale.",
   "portfolio_viewAll": "View all projects",
   "footer_description": "Engineering digital excellence for visionary brands. Let's scale your vision to millions.",
-  "footer_status": "System Status: Operational"
+  "footer_status": "System Status: Operational",
+  "footer_product": "Product",
+  "footer_digitalBridge": "Digital Bridge",
+  "footer_saasEcosystem": "SaaS Ecosystem",
+  "footer_ecommerce": "E-commerce",
+  "footer_services": "Services",
+  "footer_webDev": "Web Development",
+  "footer_mobileDev": "Mobile Development",
+  "footer_mediaManagement": "Media Management",
+  "footer_company": "Company",
+  "footer_aboutUs": "About Us",
+  "footer_portfolio": "Portfolio",
+  "footer_careers": "Careers",
+  "footer_legal": "Legal",
+  "footer_privacy": "Privacy",
+  "footer_terms": "Terms",
+  "footer_copyright": "2zek Digital Product House. All rights reserved."
 }

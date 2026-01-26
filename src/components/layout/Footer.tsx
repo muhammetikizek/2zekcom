@@ -33,44 +33,44 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-[11px] font-black uppercase tracking-widest text-foreground/40 mb-6">Product</h4>
+            <h4 className="text-[11px] font-black uppercase tracking-widest text-foreground/40 mb-6">{t('footer_product')}</h4>
             <ul className="space-y-4 text-sm font-medium text-foreground/60">
-              <li><Link href="#" className="hover:text-primary transition-colors">Digital Bridge</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">SaaS Ecosystem</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">E-commerce</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_digitalBridge')}</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_saasEcosystem')}</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_ecommerce')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-[11px] font-black uppercase tracking-widest text-foreground/40 mb-6">Services</h4>
+            <h4 className="text-[11px] font-black uppercase tracking-widest text-foreground/40 mb-6">{t('footer_services')}</h4>
             <ul className="space-y-4 text-sm font-medium text-foreground/60">
-              <li><Link href="#" className="hover:text-primary transition-colors">Web Dev</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Mobile Dev</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Media Mgmt</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_webDev')}</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_mobileDev')}</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_mediaManagement')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-[11px] font-black uppercase tracking-widest text-foreground/40 mb-6">Company</h4>
+            <h4 className="text-[11px] font-black uppercase tracking-widest text-foreground/40 mb-6">{t('footer_company')}</h4>
             <ul className="space-y-4 text-sm font-medium text-foreground/60">
-              <li><Link href="#" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Portfolio</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Careers</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_aboutUs')}</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_portfolio')}</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_careers')}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-[11px] font-black uppercase tracking-widest text-foreground/40 mb-6">Legal</h4>
+            <h4 className="text-[11px] font-black uppercase tracking-widest text-foreground/40 mb-6">{t('footer_legal')}</h4>
             <ul className="space-y-4 text-sm font-medium text-foreground/60">
-              <li><Link href="#" className="hover:text-primary transition-colors">Privacy</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Terms</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_privacy')}</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_terms')}</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border gap-6">
           <div className="text-[11px] font-bold text-foreground/40">
-            © {new Date().getFullYear()} 2zek Digital Product House. All rights reserved.
+            © {new Date().getFullYear()} {t('footer_copyright')}
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
