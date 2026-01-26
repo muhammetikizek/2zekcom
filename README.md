@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 2zek - Visionary Digital Bridge
 
-## Getting Started
+Modern, çok dilli, Next.js 16 tabanlı dijital ajans landing page'i.
 
-First, run the development server:
+## Teknolojiler
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 16.1.4** - React framework (Turbopack)
+- **React 19** - UI kütüphanesi
+- **TypeScript** - Tip güvenliği
+- **Tailwind CSS 4** - Styling
+- **next-intl** - Çok dilli destek (tr-TR, en-US)
+- **next-themes** - Dark/Light mode
+- **Framer Motion** - Animasyonlar
+- **Bun** - Package manager & runtime
+
+## Proje Yapısı
+
+```
+src/
+├── app/[locale]/       # Sayfa rotaları (i18n destekli)
+├── components/
+│   ├── home/           # Ana sayfa bileşenleri (Hero, BentoGrid, Portfolio)
+│   └── layout/         # Layout bileşenleri (Navbar, Footer)
+├── i18n/               # Uluslararasılaştırma yapılandırması
+│   ├── routing.ts      # Dil rotaları
+│   └── request.ts      # Mesaj yükleyici
+├── messages/           # Çeviri dosyaları
+│   ├── en-US.json
+│   └── tr-TR.json
+└── middleware.ts       # i18n middleware
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Kurulum
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Bağımlılıkları yükle
+bun install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Geliştirme sunucusunu başlat
+bun run dev
 
-## Learn More
+# Production build
+bun run build
 
-To learn more about Next.js, take a look at the following resources:
+# Production sunucusu
+bun run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Özellikler
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 🌐 **Çok Dilli** - Türkçe ve İngilizce desteği
+- 🌙 **Dark/Light Mode** - Tema değiştirme
+- 📱 **Responsive** - Mobil uyumlu tasarım
+- ⚡ **Hızlı** - Turbopack ile optimize
+- 🎨 **Modern UI** - Glassmorphism, gradient ve animasyonlar
 
-## Deploy on Vercel
+## Geliştirme
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Varsayılan port: `http://localhost:3000`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `/en-US` - İngilizce
+- `/tr-TR` - Türkçe
