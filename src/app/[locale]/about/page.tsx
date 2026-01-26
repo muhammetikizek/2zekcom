@@ -21,10 +21,7 @@ export default function AboutPage() {
       <section className="pt-48 pb-32 px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex flex-col items-center text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 mb-10">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-[12px] font-black uppercase tracking-[0.2em] text-primary">Your Digital Growth Partner</span>
-            </div>
+
             <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-foreground mb-10 leading-[0.9]">
               {t('about_title')}
             </h1>
