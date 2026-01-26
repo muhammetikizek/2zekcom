@@ -3,6 +3,7 @@
   "nav_services": "Hizmetler",
   "nav_portfolio": "Portfolyo",
   "nav_contact": "İletişim",
+  "nav_about": "Biz Kimiz",
   "nav_getStarted": "Başla",
   "hero_badge": "Vizyoner Dijital Köprü",
   "hero_title1": "Vizyonunuzu",
@@ -48,5 +49,17 @@
   "footer_legal": "Yasal",
   "footer_privacy": "Gizlilik",
   "footer_terms": "Şartlar",
-  "footer_copyright": "2zek Dijital Ürün Evi. Tüm hakları saklıdır."
+  "footer_copyright": "2zek Dijital Ürün Evi. Tüm hakları saklıdır.",
+  "about_title": "Biz Kimiz?",
+  "about_description": "2zek, teknoloji ve yaratıcılığın kesiştiği noktada vizyoner markalar inşa eden bir dijital ürün evidir.",
+  "about_vision_title": "Vizyonumuz",
+  "about_vision_desc": "Dijital dünyada sadece var olmanızı değil, hükmetmenizi sağlıyoruz. Karmaşık teknik süreçleri kusursuz kullanıcı deneyimlerine dönüştürüyoruz.",
+  "service_web_title": "Web Geliştirme",
+  "service_web_desc": "Modern, hızlı ve ölçeklenebilir web uygulamaları. Next.js ve en son teknolojilerle performans odaklı çözümler.",
+  "service_mobile_title": "Mobil Geliştirme",
+  "service_mobile_desc": "iOS ve Android platformlarında yüksek performanslı native ve cross-platform uygulamalar.",
+  "service_devops_title": "DevOps & Cloud",
+  "service_devops_desc": "Bulut altyapısı, süreklilik ve ölçeklenebilir sistem mimarisi. Güvenli ve otomatik deployment süreçleri.",
+  "service_ad_title": "Dijital Reklam & Strateji",
+  "service_ad_desc": "Hedef odaklı reklam kampanyaları ve veri odaklı büyüme stratejileri ile markanızı zirveye taşıyoruz."
 }

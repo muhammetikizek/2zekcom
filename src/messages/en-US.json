@@ -3,6 +3,7 @@
   "nav_services": "Services",
   "nav_portfolio": "Portfolio",
   "nav_contact": "Contact",
+  "nav_about": "About Us",
   "nav_getStarted": "Get Started",
   "hero_badge": "Visionary Digital Bridge",
   "hero_title1": "Build your",
@@ -48,5 +49,17 @@
   "footer_legal": "Legal",
   "footer_privacy": "Privacy",
   "footer_terms": "Terms",
-  "footer_copyright": "2zek Digital Product House. All rights reserved."
+  "footer_copyright": "2zek Digital Product House. All rights reserved.",
+  "about_title": "Who We Are?",
+  "about_description": "2zek is a digital product house building visionary brands at the intersection of technology and creativity.",
+  "about_vision_title": "Our Vision",
+  "about_vision_desc": "We ensure you don't just exist in the digital world, but dominate it. We transform complex technical processes into seamless user experiences.",
+  "service_web_title": "Web Development",
+  "service_web_desc": "Modern, fast, and scalable web applications. Performance-oriented solutions with Next.js and latest technologies.",
+  "service_mobile_title": "Mobile Development",
+  "service_mobile_desc": "High-performance native and cross-platform applications on iOS and Android platforms.",
+  "service_devops_title": "DevOps & Cloud",
+  "service_devops_desc": "Cloud infrastructure, consistency, and scalable system architecture. Secure and automated deployment processes.",
+  "service_ad_title": "Digital Advertising & Strategy",
+  "service_ad_desc": "We take your brand to the top with goal-oriented advertising campaigns and data-driven growth strategies."
 }
