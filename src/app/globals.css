@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #09090b;
-  --primary: #222c47;
+  --primary: #0f172a;
   --primary-foreground: #ffffff;
   --border: #e4e4e7;
   --grid-color: rgba(0, 0, 0, 0.05);
@@ -27,7 +27,7 @@
 .dark {
   --background: #000000;
   --foreground: #fafafa;
-  --primary: #5f7dbb;
+  --primary: #38bdf8;
   --border: #27272a;
   --grid-color: rgba(255, 255, 255, 0.05);
 }
@@ -36,7 +36,7 @@
   :root:not(.light) {
     --background: #000000;
     --foreground: #fafafa;
-    --primary: #5f7dbb;
+    --primary: #38bdf8;
     --border: #27272a;
     --grid-color: rgba(255, 255, 255, 0.05);
   }
