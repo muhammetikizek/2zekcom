@@ -5,44 +5,44 @@ import { IoCodeSlash, IoGlobe, IoPhonePortrait, IoShareSocial, IoCart, IoLayers 
 import { useTranslations } from 'next-intl';
 
 const BentoGrid = () => {
-  const t = useTranslations('Bento');
+  const t = useTranslations();
 
   const services = [
     {
-      title: t('webTitle'),
-      description: t('webDesc'),
+      title: t('bento_webTitle'),
+      description: t('bento_webDesc'),
       icon: <IoGlobe className="text-3xl text-primary" />,
       size: "col-span-1 md:col-span-2 row-span-2",
       tag: "High Scale",
       color: "bg-primary/5"
     },
     {
-      title: t('socialTitle'),
-      description: t('socialDesc'),
+      title: t('bento_socialTitle'),
+      description: t('bento_socialDesc'),
       icon: <IoShareSocial className="text-3xl text-[#00bf63]" />,
       size: "col-span-1 md:col-span-1 row-span-1",
       tag: "Growth",
       color: "bg-background"
     },
     {
-      title: t('ecommerceTitle'),
-      description: t('ecommerceDesc'),
+      title: t('bento_ecommerceTitle'),
+      description: t('bento_ecommerceDesc'),
       icon: <IoCart className="text-3xl text-[#00bf63]" />,
       size: "col-span-1 md:col-span-1 row-span-1",
       tag: "Business",
       color: "bg-background"
     },
     {
-      title: t('softwareTitle'),
-      description: t('softwareDesc'),
+      title: t('bento_softwareTitle'),
+      description: t('bento_softwareDesc'),
       icon: <IoCodeSlash className="text-3xl text-[#00bf63]" />,
       size: "col-span-1 md:col-span-2 row-span-1",
       tag: "Enterprise",
       color: "bg-background"
     },
     {
-      title: t('designTitle'),
-      description: t('designDesc'),
+      title: t('bento_designTitle'),
+      description: t('bento_designDesc'),
       icon: <IoLayers className="text-3xl text-[#00bf63]" />,
       size: "col-span-1 md:col-span-1 row-span-1",
       tag: "Creative",
@@ -55,10 +55,10 @@ const BentoGrid = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="mb-16 text-center md:text-left">
           <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4">
-            {t('heading1')} <span className="text-primary">{t('heading2')}</span> {t('heading3')}
+            {t('bento_heading1')} <span className="text-primary">{t('bento_heading2')}</span> {t('bento_heading3')}
           </h2>
           <p className="text-foreground/60 max-w-2xl font-medium">
-            {t('description')}
+            {t('bento_description')}
           </p>
         </div>
 

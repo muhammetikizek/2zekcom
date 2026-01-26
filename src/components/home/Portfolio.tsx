@@ -11,7 +11,7 @@ const projects = [
 ];
 
 const Portfolio = () => {
-  const t = useTranslations('Portfolio');
+  const t = useTranslations();
 
   return (
     <section id="portfolio" className="py-24 bg-foreground/[0.02]">
@@ -19,15 +19,15 @@ const Portfolio = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="text-center md:text-left">
             <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4">
-              {t('heading1')} <span className="text-primary">{t('heading2')}</span>
+              {t('portfolio_heading1')} <span className="text-primary">{t('portfolio_heading2')}</span>
             </h2>
             <p className="text-foreground/60 max-w-xl font-medium">
-              {t('description')}
+              {t('portfolio_description')}
             </p>
           </div>
           <div className="flex justify-center">
             <button className="text-sm font-bold text-primary hover:underline transition-all">
-              {t('viewAll')} ↗
+              {t('portfolio_viewAll')} ↗
             </button>
           </div>
         </div>

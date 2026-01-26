@@ -5,7 +5,7 @@ import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin, IoLogoInstagram } from "re
 import { useTranslations } from 'next-intl';
 
 const Footer = () => {
-  const t = useTranslations('Footer');
+  const t = useTranslations();
 
   return (
     <footer className="py-24 border-t border-border bg-background relative overflow-hidden">
@@ -21,7 +21,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-sm text-foreground/60 max-w-xs font-medium leading-relaxed mb-8">
-              {t('description')}
+              {t('footer_description')}
             </p>
             <div className="flex gap-4">
               {[IoLogoTwitter, IoLogoGithub, IoLogoLinkedin, IoLogoInstagram].map((Icon, i) => (
@@ -74,7 +74,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-[11px] font-bold text-foreground/40 tracking-widest uppercase">{t('status')}</span>
+            <span className="text-[11px] font-bold text-foreground/40 tracking-widest uppercase">{t('footer_status')}</span>
           </div>
         </div>
       </div>

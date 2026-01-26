@@ -13,7 +13,7 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   
-  const t = useTranslations('Navbar');
+  const t = useTranslations();
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
@@ -33,10 +33,10 @@ const Navbar = () => {
   if (!mounted) return null;
 
   const menuItems = [
-    { name: t('features'), href: "#features" },
-    { name: t('services'), href: "#services" },
-    { name: t('portfolio'), href: "#portfolio" },
-    { name: t('contact'), href: "#contact" },
+    { name: t('nav_features'), href: "#features" },
+    { name: t('nav_services'), href: "#services" },
+    { name: t('nav_portfolio'), href: "#portfolio" },
+    { name: t('nav_contact'), href: "#contact" },
   ];
 
   return (
@@ -98,7 +98,7 @@ const Navbar = () => {
               href="#contact"
               className="bg-primary text-primary-foreground px-5 py-2 rounded-full text-sm font-bold hover:opacity-90 transition-all"
             >
-              {t('getStarted')}
+              {t('nav_getStarted')}
             </Link>
           </div>
         </div>
