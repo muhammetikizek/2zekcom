@@ -1,0 +1,46 @@
+{
+  "Navbar": {
+    "features": "Features",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "Hero": {
+    "badge": "Visionary Digital Bridge",
+    "title1": "Build your",
+    "title2": "vision",
+    "title3": "with total",
+    "title4": "confidence.",
+    "description": "2zek empowers creators and businesses with next-generation digital solutions. The most powerful developer-centric agency for your global scale.",
+    "startProject": "Start Project",
+    "viewPortfolio": "View Portfolio",
+    "status": "Scaling to millions..."
+  },
+  "Bento": {
+    "heading1": "Our",
+    "heading2": "Ecosystem",
+    "heading3": "of Expertise",
+    "description": "We don't just build; we engineer growth. From technical architecture to social influence, 2zek covers the entire digital spectrum.",
+    "webTitle": "Web & Mobile Development",
+    "webDesc": "Engineering high-performance applications with Next.js, React Native, and vision-driven architecture.",
+    "socialTitle": "Social Media Strategy",
+    "socialDesc": "Scaling your brand voice with data-driven social impact and algorithm engineering.",
+    "ecommerceTitle": "E-commerce Systems",
+    "ecommerceDesc": "Building robust, secure, and conversion-optimized custom shopping experiences.",
+    "softwareTitle": "Custom Software Solutions",
+    "softwareDesc": "Solving complex business challenges with bespoke digital tools and automation.",
+    "designTitle": "Product Design & UX",
+    "designDesc": "Crafting beautiful, intuitive, and user-centric interfaces for visionary brands."
+  },
+  "Portfolio": {
+    "heading1": "Built with",
+    "heading2": "2zek",
+    "description": "We've partnered with visionary brands to build next-generation digital products. From local startups to global scale.",
+    "viewAll": "View all projects"
+  },
+  "Footer": {
+    "description": "Engineering digital excellence for visionary brands. Let's scale your vision to millions.",
+    "status": "System Status: Operational"
+  }
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from 'next-intl';
 
 const projects = [
   { name: "Taraftaro", category: "Sports Community", year: "2024" },
@@ -10,21 +11,23 @@ const projects = [
 ];
 
 const Portfolio = () => {
+  const t = useTranslations('Portfolio');
+
   return (
     <section id="portfolio" className="py-24 bg-foreground/[0.02]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="text-center md:text-left">
             <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4">
-              Built with <span className="text-primary">2zek</span>
+              {t('heading1')} <span className="text-primary">{t('heading2')}</span>
             </h2>
             <p className="text-foreground/60 max-w-xl font-medium">
-              We've partnered with visionary brands to build next-generation digital products. From local startups to global scale.
+              {t('description')}
             </p>
           </div>
           <div className="flex justify-center">
             <button className="text-sm font-bold text-primary hover:underline transition-all">
-              View all projects ↗
+              {t('viewAll')} ↗
             </button>
           </div>
         </div>

@@ -2,60 +2,63 @@
 
 import { motion } from "framer-motion";
 import { IoCodeSlash, IoGlobe, IoPhonePortrait, IoShareSocial, IoCart, IoLayers } from "react-icons/io5";
-
-const services = [
-  {
-    title: "Web & Mobile Development",
-    description: "Engineering high-performance applications with Next.js, React Native, and vision-driven architecture.",
-    icon: <IoGlobe className="text-3xl text-primary" />,
-    size: "col-span-1 md:col-span-2 row-span-2",
-    tag: "High Scale",
-    color: "bg-primary/5"
-  },
-  {
-    title: "Social Media Strategy",
-    description: "Scaling your brand voice with data-driven social impact and algorithm engineering.",
-    icon: <IoShareSocial className="text-3xl text-[#00bf63]" />,
-    size: "col-span-1 md:col-span-1 row-span-1",
-    tag: "Growth",
-    color: "bg-background"
-  },
-  {
-    title: "E-commerce Systems",
-    description: "Building robust, secure, and conversion-optimized custom shopping experiences.",
-    icon: <IoCart className="text-3xl text-[#00bf63]" />,
-    size: "col-span-1 md:col-span-1 row-span-1",
-    tag: "Business",
-    color: "bg-background"
-  },
-  {
-    title: "Custom Software Solutions",
-    description: "Solving complex business challenges with bespoke digital tools and automation.",
-    icon: <IoCodeSlash className="text-3xl text-[#00bf63]" />,
-    size: "col-span-1 md:col-span-2 row-span-1",
-    tag: "Enterprise",
-    color: "bg-background"
-  },
-  {
-    title: "Product Design & UX",
-    description: "Crafting beautiful, intuitive, and user-centric interfaces for visionary brands.",
-    icon: <IoLayers className="text-3xl text-[#00bf63]" />,
-    size: "col-span-1 md:col-span-1 row-span-1",
-    tag: "Creative",
-    color: "bg-background"
-  }
-];
+import { useTranslations } from 'next-intl';
 
 const BentoGrid = () => {
+  const t = useTranslations('Bento');
+
+  const services = [
+    {
+      title: t('webTitle'),
+      description: t('webDesc'),
+      icon: <IoGlobe className="text-3xl text-primary" />,
+      size: "col-span-1 md:col-span-2 row-span-2",
+      tag: "High Scale",
+      color: "bg-primary/5"
+    },
+    {
+      title: t('socialTitle'),
+      description: t('socialDesc'),
+      icon: <IoShareSocial className="text-3xl text-[#00bf63]" />,
+      size: "col-span-1 md:col-span-1 row-span-1",
+      tag: "Growth",
+      color: "bg-background"
+    },
+    {
+      title: t('ecommerceTitle'),
+      description: t('ecommerceDesc'),
+      icon: <IoCart className="text-3xl text-[#00bf63]" />,
+      size: "col-span-1 md:col-span-1 row-span-1",
+      tag: "Business",
+      color: "bg-background"
+    },
+    {
+      title: t('softwareTitle'),
+      description: t('softwareDesc'),
+      icon: <IoCodeSlash className="text-3xl text-[#00bf63]" />,
+      size: "col-span-1 md:col-span-2 row-span-1",
+      tag: "Enterprise",
+      color: "bg-background"
+    },
+    {
+      title: t('designTitle'),
+      description: t('designDesc'),
+      icon: <IoLayers className="text-3xl text-[#00bf63]" />,
+      size: "col-span-1 md:col-span-1 row-span-1",
+      tag: "Creative",
+      color: "bg-background"
+    }
+  ];
+
   return (
     <section id="services" className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="mb-16 text-center md:text-left">
           <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-4">
-            Our <span className="text-primary">Ecosystem</span> of Expertise
+            {t('heading1')} <span className="text-primary">{t('heading2')}</span> {t('heading3')}
           </h2>
           <p className="text-foreground/60 max-w-2xl font-medium">
-            We don't just build; we engineer growth. From technical architecture to social influence, 2zek covers the entire digital spectrum.
+            {t('description')}
           </p>
         </div>
 

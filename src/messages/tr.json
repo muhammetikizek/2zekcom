@@ -1,0 +1,46 @@
+{
+  "Navbar": {
+    "features": "Özellikler",
+    "services": "Hizmetler",
+    "portfolio": "Portfolyo",
+    "contact": "İletişim",
+    "getStarted": "Başla"
+  },
+  "Hero": {
+    "badge": "Vizyoner Dijital Köprü",
+    "title1": "Vizyonunuzu",
+    "title2": "güçle",
+    "title3": "güvenle",
+    "title4": "inşa edin.",
+    "description": "2zek, içerik üreticilerini ve işletmeleri yeni nesil dijital çözümlerle güçlendirir. Global ölçekte büyümeniz için en güçlü geliştirici odaklı ajans.",
+    "startProject": "Projeye Başla",
+    "viewPortfolio": "Portfolyo",
+    "status": "Milyonlara ölçekleniyor..."
+  },
+  "Bento": {
+    "heading1": "Uzmanlık",
+    "heading2": "Ekosistemimiz",
+    "heading3": "",
+    "description": "Biz sadece inşa etmiyoruz; büyüme mühendisliği yapıyoruz. Teknik mimariden sosyal etkiye kadar 2zek, dijital spektrumun tamamını kapsar.",
+    "webTitle": "Web ve Mobil Geliştirme",
+    "webDesc": "Next.js, React Native ve vizyon odaklı mimari ile yüksek performanslı uygulamalar mühendisliği.",
+    "socialTitle": "Sosyal Medya Stratejisi",
+    "socialDesc": "Veriye dayalı sosyal etki ve algoritma mühendisliği ile marka sesinizi ölçeklendirme.",
+    "ecommerceTitle": "E-ticaret Sistemleri",
+    "ecommerceDesc": "Sağlam, güvenli ve dönüşüm odaklı özel alışveriş deneyimleri oluşturma.",
+    "softwareTitle": "Özel Yazılım Çözümleri",
+    "softwareDesc": "Karmaşık iş zorluklarını ısmarlama dijital araçlar ve otomasyonla çözme.",
+    "designTitle": "Ürün Tasarımı ve UX",
+    "designDesc": "Vizyoner markalar için güzel, sezgisel ve kullanıcı merkezli arayüzler tasarlama."
+  },
+  "Portfolio": {
+    "heading1": "",
+    "heading2": "2zek ile İnşa Edildi",
+    "description": "Yeni nesil dijital ürünler oluşturmak için vizyoner markalarla ortaklık kurduk. Yerel girişimlerden küresel ölçeğe.",
+    "viewAll": "Tüm projeleri gör"
+  },
+  "Footer": {
+    "description": "Vizyoner markalar için dijital mükemmellik mühendisliği yapıyoruz. Vizyonunuzu milyonlara ölçeklendirelim.",
+    "status": "Sistem Durumu: Operasyonel"
+  }
+}

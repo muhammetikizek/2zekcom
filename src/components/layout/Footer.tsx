@@ -1,7 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin, IoLogoInstagram } from "react-icons/io5";
+import { useTranslations } from 'next-intl';
 
 const Footer = () => {
+  const t = useTranslations('Footer');
+
   return (
     <footer className="py-24 border-t border-border bg-background relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -16,7 +21,7 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-sm text-foreground/60 max-w-xs font-medium leading-relaxed mb-8">
-              Engineering digital excellence for visionary brands. Let's scale your vision to millions.
+              {t('description')}
             </p>
             <div className="flex gap-4">
               {[IoLogoTwitter, IoLogoGithub, IoLogoLinkedin, IoLogoInstagram].map((Icon, i) => (
@@ -69,7 +74,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-[11px] font-bold text-foreground/40 tracking-widest uppercase">System Status: Operational</span>
+            <span className="text-[11px] font-bold text-foreground/40 tracking-widest uppercase">{t('status')}</span>
           </div>
         </div>
       </div>

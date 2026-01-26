@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import { IoArrowForward, IoLogoGithub } from "react-icons/io5";
+import { useTranslations } from 'next-intl';
 
 const Hero = () => {
+  const t = useTranslations('Hero');
+
   return (
     <section className="relative min-h-screen pt-32 pb-20 flex flex-col items-center justify-center overflow-hidden">
       {/* Mesh Gradient Background */}
@@ -23,28 +26,27 @@ const Hero = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
-            Visionary Digital Bridge
+            {t('badge')}
           </div>
 
           {/* Heading */}
           <h1 className="text-5xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.9]">
-            Build your <span className="text-primary">vision</span> <br /> 
-            with total <span className="text-foreground/40">confidence.</span>
+            {t('title1')} <span className="text-primary">{t('title2')}</span> <br /> 
+            {t('title3')} <span className="text-foreground/40">{t('title4')}</span>
           </h1>
 
           {/* Subtext */}
           <p className="text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto mb-12 font-medium">
-            2zek empowers creators and businesses with next-generation digital solutions. 
-            The most powerful developer-centric agency for your global scale.
+            {t('description')}
           </p>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button className="w-full sm:w-auto bg-primary text-primary-foreground px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-primary/20">
-              Start Project <IoArrowForward size={18} />
+              {t('startProject')} <IoArrowForward size={18} />
             </button>
             <button className="w-full sm:w-auto bg-foreground/5 hover:bg-foreground/10 text-foreground px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all border border-border">
-              <IoLogoGithub size={20} /> View Portfolio
+              <IoLogoGithub size={20} /> {t('viewPortfolio')}
             </button>
           </div>
         </motion.div>
@@ -71,7 +73,7 @@ const Hero = () => {
                    <div className="w-3/4 h-3 bg-foreground/10 rounded-full" />
                    <div className="w-1/2 h-3 bg-foreground/10 rounded-full" />
                    <div className="w-2/3 h-3 bg-foreground/10 rounded-full" />
-                   <div className="pt-6 text-foreground/80">Scaling to millions... <span className="animate-pulse">_</span></div>
+                   <div className="pt-6 text-foreground/80">{t('status')} <span className="animate-pulse">_</span></div>
                 </div>
              </div>
           </div>
