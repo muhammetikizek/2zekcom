@@ -9,9 +9,18 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen pt-32 pb-20 flex flex-col items-center justify-center overflow-hidden">
-      {/* Mesh Gradient Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] glow-primary" />
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-overlay"
+          style={{ backgroundImage: 'url("/images/hero_bg.png")' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+      </div>
+
+      {/* Mesh Gradient Overlay */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none z-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] glow-primary opacity-30" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">

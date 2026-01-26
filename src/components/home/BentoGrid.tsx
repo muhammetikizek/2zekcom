@@ -14,7 +14,8 @@ const BentoGrid = () => {
       icon: <IoPhonePortrait className="text-3xl text-primary" />,
       size: "col-span-1 md:col-span-2 row-span-2",
       tag: "Tech",
-      color: "bg-primary/5"
+      color: "bg-primary/5",
+      image: "/images/mobile_app.png"
     },
     {
       title: t('bento_socialTitle'),
@@ -22,7 +23,8 @@ const BentoGrid = () => {
       icon: <IoShareSocial className="text-3xl text-primary" />,
       size: "col-span-1 md:col-span-1 row-span-1",
       tag: "Ad",
-      color: "bg-background"
+      color: "bg-background",
+      image: "/images/advertising.png"
     },
     {
       title: t('bento_ecommerceTitle'),
@@ -30,7 +32,8 @@ const BentoGrid = () => {
       icon: <IoLayers className="text-3xl text-primary" />,
       size: "col-span-1 md:col-span-1 row-span-1",
       tag: "Product",
-      color: "bg-background"
+      color: "bg-background",
+      image: "/images/ecommerce.png"
     },
     {
       title: t('bento_softwareTitle'),
@@ -38,7 +41,8 @@ const BentoGrid = () => {
       icon: <IoCodeSlash className="text-3xl text-primary" />,
       size: "col-span-1 md:col-span-2 row-span-1",
       tag: "Outsource",
-      color: "bg-background"
+      color: "bg-background",
+      image: "/images/saas_product.png"
     },
     {
       title: t('bento_designTitle'),
@@ -46,7 +50,8 @@ const BentoGrid = () => {
       icon: <IoGlobe className="text-3xl text-primary" />,
       size: "col-span-1 md:col-span-1 row-span-1",
       tag: "Creative",
-      color: "bg-background"
+      color: "bg-background",
+      image: "/images/design_ux.png"
     }
   ];
 
@@ -72,13 +77,24 @@ const BentoGrid = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`${service.size} group relative rounded-3xl border border-border overflow-hidden flex flex-col justify-between p-8 transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 ${service.color}`}
             >
-              {/* Background Grid for Cards */}
-              <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#00bf63_1px,transparent_1px)] [background-size:20px_20px]" />
+              {/* Background Image for Cards */}
+              {service.image && (
+                <div className="absolute inset-0 z-0">
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-20 grayscale group-hover:grayscale-0 group-hover:opacity-40"
+                    style={{ backgroundImage: `url("${service.image}")` }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                </div>
+              )}
+              
+              {/* Background Grid Pattern */}
+              <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#5256a6_1px,transparent_1px)] [background-size:20px_20px] z-0" />
               
               <div className="relative z-10">
                 <div className="mb-6">{service.icon}</div>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-primary px-2 py-0.5 rounded-full border border-primary/20 bg-primary/5">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-primary px-2 py-0.5 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-md">
                     {service.tag}
                   </span>
                 </div>
@@ -94,7 +110,7 @@ const BentoGrid = () => {
               </div>
               
               {/* Hover Glow Effect */}
-              <div className="absolute -bottom-1/2 -right-1/2 w-64 h-64 bg-primary/10 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute -bottom-1/2 -right-1/2 w-64 h-64 bg-primary/10 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
             </motion.div>
           ))}
         </div>
