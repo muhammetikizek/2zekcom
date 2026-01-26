@@ -39,10 +39,10 @@ const Navbar = () => {
   const menuItems = [
     { name: t('nav_features'), href: "#features" },
     { name: t('nav_services'), href: "#services" },
-    { name: t('nav_about'), href: "/about" },
-    { name: t('nav_team'), href: "/team" },
+    { name: t('nav_products'), href: "#products" },
     { name: t('nav_portfolio'), href: "#portfolio" },
-    { name: t('nav_contact'), href: "#contact" },
+    { name: t('nav_blog'), href: "/blog" },
+    { name: t('nav_about'), href: "/about" },
   ];
 
   return (

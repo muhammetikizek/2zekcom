@@ -11,39 +11,39 @@ const BentoGrid = () => {
     {
       title: t('bento_webTitle'),
       description: t('bento_webDesc'),
-      icon: <IoGlobe className="text-3xl text-primary" />,
+      icon: <IoPhonePortrait className="text-3xl text-primary" />,
       size: "col-span-1 md:col-span-2 row-span-2",
-      tag: "High Scale",
+      tag: "Tech",
       color: "bg-primary/5"
     },
     {
       title: t('bento_socialTitle'),
       description: t('bento_socialDesc'),
-      icon: <IoShareSocial className="text-3xl text-[#00bf63]" />,
+      icon: <IoShareSocial className="text-3xl text-primary" />,
       size: "col-span-1 md:col-span-1 row-span-1",
-      tag: "Growth",
+      tag: "Ad",
       color: "bg-background"
     },
     {
       title: t('bento_ecommerceTitle'),
       description: t('bento_ecommerceDesc'),
-      icon: <IoCart className="text-3xl text-[#00bf63]" />,
+      icon: <IoLayers className="text-3xl text-primary" />,
       size: "col-span-1 md:col-span-1 row-span-1",
-      tag: "Business",
+      tag: "Product",
       color: "bg-background"
     },
     {
       title: t('bento_softwareTitle'),
       description: t('bento_softwareDesc'),
-      icon: <IoCodeSlash className="text-3xl text-[#00bf63]" />,
+      icon: <IoCodeSlash className="text-3xl text-primary" />,
       size: "col-span-1 md:col-span-2 row-span-1",
-      tag: "Enterprise",
+      tag: "Outsource",
       color: "bg-background"
     },
     {
       title: t('bento_designTitle'),
       description: t('bento_designDesc'),
-      icon: <IoLayers className="text-3xl text-[#00bf63]" />,
+      icon: <IoGlobe className="text-3xl text-primary" />,
       size: "col-span-1 md:col-span-1 row-span-1",
       tag: "Creative",
       color: "bg-background"
