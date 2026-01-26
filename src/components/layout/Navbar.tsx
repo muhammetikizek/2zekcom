@@ -53,7 +53,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Brand size={40} />
+        <Brand size={40} rotateOnHover={true} />
 
         {/* Desktop Menu - Centered */}
         <div className="hidden md:flex flex-1 justify-center">

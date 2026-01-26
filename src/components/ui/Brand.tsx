@@ -7,12 +7,21 @@ interface BrandProps {
   size?: number;
   className?: string;
   showText?: boolean;
+  rotateOnHover?: boolean;
 }
 
-const Brand = ({ size = 36, className = "", showText = true }: BrandProps) => {
+const Brand = ({ 
+  size = 36, 
+  className = "", 
+  showText = true,
+  rotateOnHover = false 
+}: BrandProps) => {
   return (
     <Link href="/" className={`flex items-center gap-2 group ${className}`}>
-      <LogoIcon size={size} />
+      <LogoIcon 
+        size={size} 
+        className={rotateOnHover ? "transition-transform duration-500 ease-in-out group-hover:rotate-90" : ""}
+      />
       {showText && (
         <span 
           className="tracking-wider text-foreground group-hover:text-primary transition-colors"

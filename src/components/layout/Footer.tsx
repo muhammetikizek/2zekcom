@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-12 md:gap-8 mb-20">
           <div className="col-span-2">
-            <Brand size={48} className="mb-6 w-fit" />
+            <Brand size={48} className="mb-6 w-fit" rotateOnHover={true} />
             <p className="text-sm text-foreground/60 max-w-xs font-medium leading-relaxed mb-8">
               {t('footer_description')}
             </p>
