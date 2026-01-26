@@ -67,7 +67,7 @@ const BentoGrid = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[240px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[300px]">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -75,7 +75,7 @@ const BentoGrid = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`${service.size} group relative rounded-3xl border border-border overflow-hidden flex flex-col justify-between p-8 transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 ${service.color}`}
+              className={`${service.size} group relative rounded-3xl border border-border overflow-hidden flex flex-col justify-between p-8 md:p-10 pb-16 md:pb-20 transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 ${service.color}`}
             >
               {/* Background Image for Cards */}
               {service.image && (
@@ -93,6 +93,9 @@ const BentoGrid = () => {
               
               <div className="relative z-10">
                 <div className="mb-6">{service.icon}</div>
+              </div>
+
+              <div className="relative z-10">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-[10px] font-black uppercase tracking-widest text-primary px-2 py-0.5 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-md">
                     {service.tag}
@@ -101,9 +104,6 @@ const BentoGrid = () => {
                 <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-3">
                   {service.title}
                 </h3>
-              </div>
-
-              <div className="relative z-10">
                 <p className="text-sm md:text-base text-foreground/60 font-medium leading-relaxed">
                   {service.description}
                 </p>
