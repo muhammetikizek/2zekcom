@@ -18,8 +18,8 @@ const Brand = ({ size = 36, className = "", showText = true }: BrandProps) => {
           className="tracking-wider text-foreground group-hover:text-primary transition-colors"
           style={{ fontSize: `${size * 0.55}px` }}
         >
-          <span className="font-black">2</span>
-          <span className="font-light">ZEK</span>
+          <span className="font-black" style={{ fontSize: '1.15em' }}>2</span>
+          <span className="font-bold">ZEK</span>
         </span>
       )}
     </Link>
