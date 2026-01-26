@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #09090b;
-  --primary: #00bf63;
+  --primary: #222c47;
   --primary-foreground: #ffffff;
   --border: #e4e4e7;
   --grid-color: rgba(0, 0, 0, 0.05);
@@ -15,7 +15,7 @@
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-border: var(--border);
-  
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
@@ -27,6 +27,7 @@
 .dark {
   --background: #000000;
   --foreground: #fafafa;
+  --primary: #5f7dbb;
   --border: #27272a;
   --grid-color: rgba(255, 255, 255, 0.05);
 }
@@ -35,6 +36,7 @@
   :root:not(.light) {
     --background: #000000;
     --foreground: #fafafa;
+    --primary: #5f7dbb;
     --border: #27272a;
     --grid-color: rgba(255, 255, 255, 0.05);
   }
@@ -44,7 +46,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), sans-serif;
-  background-image: 
+  background-image:
     linear-gradient(var(--grid-color) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 40px 40px;
