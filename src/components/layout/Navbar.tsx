@@ -1,11 +1,12 @@
 "use client";
 
 import { Link } from '@/i18n/routing';
-import { IoMenu, IoClose, IoLogoTwitter, IoLogoGithub, IoMoon, IoSunny, IoGlobeOutline } from "react-icons/io5";
+import { IoMenu, IoClose, IoLogoGithub, IoMoon, IoSunny, IoGlobeOutline } from "react-icons/io5";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/routing';
+import LogoIcon from '@/components/ui/LogoIcon';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,11 +53,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-black text-xl">
-            2
-          </div>
-          <span className="text-xl font-bold tracking-tighter text-foreground group-hover:text-primary transition-colors">
-            zek
+          <LogoIcon size={36} />
+          <span className="text-xl font-black tracking-tight text-foreground group-hover:text-primary transition-colors">
+            2ZEK
           </span>
         </Link>
 

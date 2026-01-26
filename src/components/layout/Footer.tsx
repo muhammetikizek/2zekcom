@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin, IoLogoInstagram } from "react-icons/io5";
 import { useTranslations } from 'next-intl';
+import LogoIcon from '@/components/ui/LogoIcon';
 
 const Footer = () => {
   const t = useTranslations();
@@ -13,11 +14,9 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-6 gap-12 md:gap-8 mb-20">
           <div className="col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-6 group w-fit">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-black text-xl">
-                2
-              </div>
-              <span className="text-xl font-bold tracking-tighter text-foreground group-hover:text-primary transition-colors">
-                zek
+              <LogoIcon size={36} />
+              <span className="text-xl font-black tracking-tight text-foreground group-hover:text-primary transition-colors">
+                2ZEK
               </span>
             </Link>
             <p className="text-sm text-foreground/60 max-w-xs font-medium leading-relaxed mb-8">

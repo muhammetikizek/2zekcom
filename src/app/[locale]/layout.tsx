@@ -17,8 +17,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "2zek | Visionary Digital Bridge",
+  title: "2ZEK | Visionary Digital Bridge",
   description: "Next-generation digital solutions for global scale.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/logo.svg",
+  },
 };
 
 export default async function RootLayout({
