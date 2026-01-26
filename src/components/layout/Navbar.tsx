@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from '@/i18n/routing';
 import { IoMenu, IoClose, IoLogoTwitter, IoLogoGithub, IoMoon, IoSunny, IoGlobeOutline } from "react-icons/io5";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { useTranslations, useLocale } from 'next-intl';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter } from '@/i18n/routing';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,9 +26,8 @@ const Navbar = () => {
   }, []);
 
   const toggleLanguage = () => {
-    const nextLocale = locale === 'en' ? 'tr' : 'en';
-    const newPathname = pathname.replace(`/${locale}`, `/${nextLocale}`);
-    router.push(newPathname || `/${nextLocale}`);
+    const nextLocale = locale === 'en-US' ? 'tr-TR' : 'en-US';
+    router.push(pathname, {locale: nextLocale});
   };
 
   if (!mounted) return null;
@@ -48,7 +47,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href={`/${locale}`} className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group">
           <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-black text-xl">
             2
           </div>
@@ -78,7 +77,7 @@ const Navbar = () => {
               className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-border text-xs font-bold text-foreground/60 hover:text-primary hover:border-primary/20 transition-all cursor-pointer"
             >
               <IoGlobeOutline size={14} />
-              {locale.toUpperCase()}
+              {locale === 'en-US' ? 'EN' : 'TR'}
             </button>
 
             <button
@@ -141,7 +140,7 @@ const Navbar = () => {
               className="flex items-center gap-2 px-4 py-2 rounded-xl border border-border text-sm font-bold text-foreground"
             >
               <IoGlobeOutline size={18} />
-              {locale === 'en' ? 'Türkçe' : 'English'}
+              {locale === 'en-US' ? 'Türkçe' : 'English'}
             </button>
           </div>
         </div>
