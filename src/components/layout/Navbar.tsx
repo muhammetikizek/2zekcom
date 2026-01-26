@@ -7,6 +7,7 @@ import { useTheme } from "next-themes";
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/routing';
 import LogoIcon from '@/components/ui/LogoIcon';
+import Brand from '@/components/ui/Brand';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,58 +53,54 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <LogoIcon size={36} />
-          <span className="text-xl font-black tracking-tight text-foreground group-hover:text-primary transition-colors">
-            2ZEK
-          </span>
-        </Link>
+        <Brand size={40} />
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
-          {menuItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors"
-            >
-              {item.name}
-            </Link>
-          ))}
-          
-          <div className="h-4 w-[1px] bg-border mx-2" />
-          
-          <div className="flex items-center gap-4">
-            {/* Language Switcher */}
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-border text-xs font-bold text-foreground/60 hover:text-primary hover:border-primary/20 transition-all cursor-pointer"
-            >
-              <IoGlobeOutline size={14} />
-              {locale === 'en-US' ? 'EN' : 'TR'}
-            </button>
-
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="p-2 text-foreground/60 hover:text-primary transition-colors cursor-pointer"
-            >
-              {theme === "dark" ? <IoSunny size={20} /> : <IoMoon size={20} />}
-            </button>
-            
-            <Link
-              href="https://github.com"
-              target="_blank"
-              className="p-2 text-foreground/60 hover:text-primary transition-colors"
-            >
-              <IoLogoGithub size={20} />
-            </Link>
-            <Link
-              href="#contact"
-              className="bg-primary text-primary-foreground px-5 py-2 rounded-full text-sm font-bold hover:opacity-90 transition-all"
-            >
-              {t('nav_getStarted')}
-            </Link>
+        {/* Desktop Menu - Centered */}
+        <div className="hidden md:flex flex-1 justify-center">
+          <div className="flex items-center gap-8">
+            {menuItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
+        </div>
+        
+        {/* Actions - Right */}
+        <div className="hidden md:flex items-center gap-4">
+          {/* Language Switcher */}
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-border text-xs font-bold text-foreground/60 hover:text-primary hover:border-primary/20 transition-all cursor-pointer"
+          >
+            <IoGlobeOutline size={14} />
+            {locale === 'en-US' ? 'EN' : 'TR'}
+          </button>
+
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="p-2 text-foreground/60 hover:text-primary transition-colors cursor-pointer"
+          >
+            {theme === "dark" ? <IoSunny size={20} /> : <IoMoon size={20} />}
+          </button>
+          
+          <Link
+            href="https://github.com"
+            target="_blank"
+            className="p-2 text-foreground/60 hover:text-primary transition-colors"
+          >
+            <IoLogoGithub size={20} />
+          </Link>
+          <Link
+            href="#contact"
+            className="bg-primary text-primary-foreground px-5 py-2 rounded-full text-sm font-bold hover:opacity-90 transition-all"
+          >
+            {t('nav_getStarted')}
+          </Link>
         </div>
 
         {/* Mobile Toggle */}

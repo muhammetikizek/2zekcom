@@ -4,6 +4,7 @@ import Link from "next/link";
 import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin, IoLogoInstagram } from "react-icons/io5";
 import { useTranslations } from 'next-intl';
 import LogoIcon from '@/components/ui/LogoIcon';
+import Brand from '@/components/ui/Brand';
 
 const Footer = () => {
   const t = useTranslations();
@@ -13,12 +14,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-12 md:gap-8 mb-20">
           <div className="col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-6 group w-fit">
-              <LogoIcon size={36} />
-              <span className="text-xl font-black tracking-tight text-foreground group-hover:text-primary transition-colors">
-                2ZEK
-              </span>
-            </Link>
+            <Brand size={48} className="mb-6 w-fit" />
             <p className="text-sm text-foreground/60 max-w-xs font-medium leading-relaxed mb-8">
               {t('footer_description')}
             </p>
