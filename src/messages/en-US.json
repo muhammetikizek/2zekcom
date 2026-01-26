@@ -4,6 +4,7 @@
   "nav_portfolio": "Portfolio",
   "nav_contact": "Contact",
   "nav_about": "About Us",
+  "nav_team": "Team",
   "nav_getStarted": "Get Started",
   "hero_badge": "Visionary Digital Bridge",
   "hero_title1": "Build your",
@@ -61,5 +62,13 @@
   "service_ad_title": "Growth & Digital Marketing",
   "service_ad_desc": "Connecting your brand with the right audience through Google Ads, Meta Ads (Instagram/Facebook), and data-driven ad strategies.",
   "service_strategy_title": "Marketing Intelligence & SEO",
-  "service_strategy_desc": "Transforming organic and paid traffic into sales through SEO, content engineering, and conversion rate optimization (CRO)."
+  "service_strategy_desc": "Transforming organic and paid traffic into sales through SEO, content engineering, and conversion rate optimization (CRO).",
+  "team_title": "Meet the Team",
+  "team_description": "2zek consists of an expert, passionate, and visionary team. We build the future by combining technology and creativity.",
+  "role_management": "Management",
+  "role_head_dev": "Head of Development",
+  "role_hr": "Human Resources",
+  "role_dev": "Development",
+  "role_design": "Design",
+  "role_studio_manager": "Studio Manager"
 }

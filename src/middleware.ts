@@ -6,5 +6,5 @@ export default createMiddleware(routing);
 export const config = {
   // Match both '/' and all paths starting with a locale, 
   // but ignore internal paths and files with extensions
-  matcher: ['/((?!api|_next|_static|_vercel|[\\w-]+\\.\\w+).*)']
+  matcher: ['/((?!api|_next|_static|_vercel|.*\\..*).*)']
 };
