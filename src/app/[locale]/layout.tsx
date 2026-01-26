@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   },
 };
 
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+
 export default async function RootLayout({
   children,
   params
@@ -52,7 +55,11 @@ export default async function RootLayout({
           timeZone="Europe/Istanbul"
         >
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-            {children}
+            <Navbar />
+            <main className="relative">
+              {children}
+            </main>
+            <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
