@@ -21,6 +21,8 @@ const Navbar = () => {
   useEffect(() => {
     setMounted(true);
     const handleScroll = () => setScrolled(window.scrollY > 20);
+    // İlk yüklemede scroll pozisyonunu kontrol et
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
