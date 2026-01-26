@@ -12,12 +12,6 @@
     "image": "/team/member2.png"
   },
   {
-    "id": "3",
-    "name": "Dilan ZADSAN",
-    "roleKey": "role_hr",
-    "image": "/team/member3.png"
-  },
-  {
     "id": "4",
     "name": "Erdinç ÖZTAŞ",
     "roleKey": "role_dev",
@@ -30,21 +24,9 @@
     "image": "/team/member5.png"
   },
   {
-    "id": "6",
-    "name": "Berat YEŞBEK",
-    "roleKey": "role_dev",
-    "image": "/team/member6.png"
-  },
-  {
     "id": "7",
     "name": "Furkan ÇELİK",
     "roleKey": "role_design",
     "image": "/team/member7.png"
-  },
-  {
-    "id": "8",
-    "name": "Süleyman İKİZEK",
-    "roleKey": "role_studio_manager",
-    "image": "/team/member8.png"
   }
 ]
