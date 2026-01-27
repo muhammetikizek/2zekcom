@@ -38,9 +38,9 @@ const Navbar = () => {
 
   const menuItems = [
     { name: t('about'), href: "/about" },
-    { name: t('services'), href: "#services" },
+    { name: t('services'), href: "/services" },
     { name: t('team'), href: "/team" },
-    { name: t('clients'), href: "#clients" },
+    { name: t('clients'), href: "/clients" },
     { name: t('blog'), href: "/blog" },
   ];
 
@@ -97,7 +97,7 @@ const Navbar = () => {
             <IoLogoGithub size={20} />
           </Link>
           <Link
-            href="#contact"
+            href={pathname === '/' ? "#contact" : "/contact"}
             className="bg-primary text-primary-foreground px-5 py-2 rounded-full text-sm font-bold hover:opacity-90 transition-all"
           >
             {t('contact_us')}
@@ -144,6 +144,14 @@ const Navbar = () => {
               {locale === 'en' ? 'Türkçe' : 'English'}
             </button>
           </div>
+
+          <Link
+            href={pathname === '/' ? "#contact" : "/contact"}
+            className="w-full bg-primary text-primary-foreground font-black py-4 rounded-xl flex items-center justify-center gap-2 mt-2"
+            onClick={() => setIsOpen(false)}
+          >
+            {t('contact_us')}
+          </Link>
         </div>
       )}
     </nav>
