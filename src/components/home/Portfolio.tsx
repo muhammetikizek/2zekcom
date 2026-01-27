@@ -42,8 +42,6 @@ const Portfolio = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative aspect-[4/3] rounded-3xl border border-border bg-background flex flex-col items-center justify-center p-8 transition-all hover:bg-primary/5 hover:border-primary/20 overflow-hidden"
             >
-              <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[radial-gradient(#00bf63_1px,transparent_1px)] [background-size:20px_20px]" />
-              
               <div className="text-2xl font-black tracking-tighter mb-2 group-hover:scale-110 transition-transform duration-500">
                 {project.name}
               </div>

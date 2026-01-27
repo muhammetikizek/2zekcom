@@ -1,8 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
 import LogoIcon from '@/components/ui/LogoIcon';
 import Image from 'next/image';
 import teamData from '@/data/team.json';
@@ -38,7 +36,6 @@ export default function TeamPage() {
 
   return (
     <main className="min-h-screen bg-background">
-      <Navbar />
       
       {/* Hero Section */}
       <section className="pt-48 pb-20 px-6 relative overflow-hidden text-center">
@@ -134,7 +131,6 @@ export default function TeamPage() {
         </motion.div>
       </section>
 
-      <Footer />
     </main>
   );
 }

@@ -59,7 +59,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <header className="mb-12">
           <div className="flex items-center gap-4 mb-6">
             <span className="text-xs font-bold text-primary px-3 py-1 bg-primary/10 rounded-full uppercase tracking-wider">
-              {locale === 'tr-TR' ? 'Blog' : 'Insights'}
+              {locale === 'tr' ? 'Blog' : 'Insights'}
             </span>
             <span className="text-sm text-foreground/40 font-medium">
               {post.date} • {post.author}
@@ -83,7 +83,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
               <div>
                 <div className="font-bold text-foreground">{post.author}</div>
-                <div className="text-sm text-foreground/40">{locale === 'tr-TR' ? '2zek Blog Yazarı' : '2zek Blog Author'}</div>
+                <div className="text-sm text-foreground/40">{locale === 'tr' ? '2zek Blog Yazarı' : '2zek Blog Author'}</div>
               </div>
             </div>
           </div>

@@ -30,19 +30,18 @@ const Navbar = () => {
   }, []);
 
   const toggleLanguage = () => {
-    const nextLocale = locale === 'en-US' ? 'tr-TR' : 'en-US';
+    const nextLocale = locale === 'en' ? 'tr' : 'en';
     router.push(pathname, {locale: nextLocale});
   };
 
   if (!mounted) return null;
 
   const menuItems = [
-    { name: t('nav_features'), href: "#features" },
-    { name: t('nav_services'), href: "#services" },
-    { name: t('nav_products'), href: "#products" },
-    { name: t('nav_portfolio'), href: "#portfolio" },
-    { name: t('nav_blog'), href: "/blog" },
-    { name: t('nav_about'), href: "/about" },
+    { name: t('about'), href: "/about" },
+    { name: t('services'), href: "#services" },
+    { name: t('team'), href: "/team" },
+    { name: t('clients'), href: "#clients" },
+    { name: t('blog'), href: "/blog" },
   ];
 
   return (
@@ -80,7 +79,7 @@ const Navbar = () => {
             className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-border text-xs font-bold text-foreground/60 hover:text-primary hover:border-primary/20 transition-all cursor-pointer"
           >
             <IoGlobeOutline size={14} />
-            {locale === 'en-US' ? 'EN' : 'TR'}
+            {locale === 'en' ? 'EN' : 'TR'}
           </button>
 
           <button
@@ -91,7 +90,7 @@ const Navbar = () => {
           </button>
           
           <Link
-            href="https://github.com"
+            href="https://github.com/2zek"
             target="_blank"
             className="p-2 text-foreground/60 hover:text-primary transition-colors"
           >
@@ -101,7 +100,7 @@ const Navbar = () => {
             href="#contact"
             className="bg-primary text-primary-foreground px-5 py-2 rounded-full text-sm font-bold hover:opacity-90 transition-all"
           >
-            {t('nav_getStarted')}
+            {t('contact_us')}
           </Link>
         </div>
 
@@ -142,7 +141,7 @@ const Navbar = () => {
               className="flex items-center gap-2 px-4 py-2 rounded-xl border border-border text-sm font-bold text-foreground"
             >
               <IoGlobeOutline size={18} />
-              {locale === 'en-US' ? 'Türkçe' : 'English'}
+              {locale === 'en' ? 'Türkçe' : 'English'}
             </button>
           </div>
         </div>

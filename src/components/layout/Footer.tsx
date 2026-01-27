@@ -10,11 +10,11 @@ const Footer = () => {
   const t = useTranslations();
 
   return (
-    <footer className="py-24 border-t border-border bg-background relative overflow-hidden">
+    <footer className="py-24 border-t border-border bg-[#0a0a0a] dark relative overflow-hidden text-foreground/60">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-12 md:gap-8 mb-20">
           <div className="col-span-2">
-            <Brand size={48} className="mb-6 w-fit" rotateOnHover={true} />
+            <Brand size={48} className="mb-6 w-fit text-foreground/60" rotateOnHover={true} />
             <p className="text-sm text-foreground/60 max-w-xs font-medium leading-relaxed mb-8">
               {t('footer_description')}
             </p>
@@ -48,9 +48,10 @@ const Footer = () => {
           <div>
             <h4 className="text-[11px] font-black uppercase tracking-widest text-foreground/40 mb-6">{t('footer_company')}</h4>
             <ul className="space-y-4 text-sm font-medium text-foreground/60">
-              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_aboutUs')}</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_portfolio')}</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_careers')}</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">{t('about')}</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">{t('clients')}</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">{t('careers')}</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">{t('blog')}</Link></li>
             </ul>
           </div>
 

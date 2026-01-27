@@ -1,8 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
 import { IoRocketOutline, IoCodeSlashOutline, IoCloudDoneOutline, IoTrendingUpOutline, IoSearchOutline, IoPeopleOutline } from "react-icons/io5";
 import { motion, Variants } from 'framer-motion';
 
@@ -38,7 +36,6 @@ export default function AboutPage() {
 
   return (
     <main className="min-h-screen bg-background">
-      <Navbar />
       
       {/* Hero Section */}
       <section className="pt-48 pb-32 px-6 relative overflow-hidden">
@@ -154,7 +151,6 @@ export default function AboutPage() {
         </motion.div>
       </section>
 
-      <Footer />
     </main>
   );
 }

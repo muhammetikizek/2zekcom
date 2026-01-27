@@ -62,7 +62,7 @@ export async function getPostData(slug: string, locale: string): Promise<BlogPos
 }
 
 export async function getAllPostSlugs() {
-  const locales = ['en-US', 'tr-TR'];
+  const locales = ['en', 'tr'];
   const paths: { slug: string; locale: string }[] = [];
 
   locales.forEach((locale) => {

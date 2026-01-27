@@ -1,4 +1,4 @@
-"use client";
+import { useId } from "react";
 
 interface LogoIconProps {
   size?: number;
@@ -6,6 +6,8 @@ interface LogoIconProps {
 }
 
 const LogoIcon = ({ size = 32, className = "" }: LogoIconProps) => {
+  const maskId = useId();
+
   return (
     <svg 
       width={size} 
@@ -16,7 +18,7 @@ const LogoIcon = ({ size = 32, className = "" }: LogoIconProps) => {
       className={className}
     >
       <defs>
-        <mask id="logo-mask">
+        <mask id={maskId}>
           <circle cx="750" cy="750" r="725" fill="white"/>
           <g transform="matrix(1, 0, 0, 1, 320, 533)">
             <g transform="translate(1.076851, 1196.861881)">
@@ -30,7 +32,7 @@ const LogoIcon = ({ size = 32, className = "" }: LogoIconProps) => {
           </g>
         </mask>
       </defs>
-      <circle cx="750" cy="750" r="725" fill="var(--primary)" mask="url(#logo-mask)"/>
+      <circle cx="750" cy="750" r="725" fill="currentColor" mask={`url(#${maskId})`}/>
     </svg>
   );
 };

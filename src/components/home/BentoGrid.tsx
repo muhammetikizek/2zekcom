@@ -88,9 +88,6 @@ const BentoGrid = () => {
                 </div>
               )}
               
-              {/* Background Grid Pattern */}
-              <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#5256a6_1px,transparent_1px)] [background-size:20px_20px] z-0" />
-              
               <div className="relative z-10">
                 <div className="mb-6">{service.icon}</div>
               </div>

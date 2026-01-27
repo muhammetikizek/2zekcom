@@ -24,7 +24,7 @@ const Brand = ({
       />
       {showText && (
         <span 
-          className="tracking-wider text-foreground group-hover:text-primary transition-colors"
+          className="tracking-wider transition-colors"
           style={{ fontSize: `${size * 0.55}px` }}
         >
           <span className="font-black" style={{ fontSize: '1.15em' }}>2</span>
