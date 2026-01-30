@@ -1,6 +1,6 @@
 "use client";
 
-import { Link } from '@/i18n/routing';
+import { Link, usePathname } from '@/i18n/routing';
 import LogoIcon from './LogoIcon';
 
 interface BrandProps {
@@ -16,8 +16,21 @@ const Brand = ({
   showText = true,
   rotateOnHover = false 
 }: BrandProps) => {
+  const pathname = usePathname();
+
+  const handleClick = (e: React.MouseEvent) => {
+    if (pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <Link href="/" className={`flex items-center gap-2 group ${className}`}>
+    <Link 
+      href="/" 
+      onClick={handleClick}
+      className={`flex items-center gap-2 group ${className}`}
+    >
       <LogoIcon 
         size={size} 
         className={rotateOnHover ? "transition-transform duration-500 ease-in-out group-hover:rotate-90" : ""}

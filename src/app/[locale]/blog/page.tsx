@@ -15,10 +15,10 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   
   return {
     title: `Blog | 2zek - ${t('hero_badge')}`,
-    description: t('nav_blog') + " - Teknoloji, tasarım ve dijital dönüşüm üzerine düşüncelerimiz.",
+    description: t('blog') + " - Teknoloji, tasarım ve dijital dönüşüm üzerine düşüncelerimiz.",
     openGraph: {
       title: `Blog | 2zek`,
-      description: t('nav_blog'),
+      description: t('blog'),
       type: 'website',
     }
   };

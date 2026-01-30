@@ -1,0 +1,75 @@
+{
+  "socials": [
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/2zekcom",
+      "icon": "twitter"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/2zek",
+      "icon": "github"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/company/2zek",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://instagram.com/2zekcom",
+      "icon": "instagram"
+    }
+  ],
+  "contact": {
+    "email": "info@2zek.com",
+    "phone": "",
+    "address": ""
+  },
+  "branding": {
+    "name": "2zek Studio",
+    "legalName": "2zek Digital Product House",
+    "foundingYear": 2024
+  },
+  "footer": {
+    "menus": [
+      {
+        "title": "products",
+        "items": [
+          { "label": "taraftaro", "href": "https://taraftaro.com", "external": true }
+        ]
+      },
+      {
+        "title": "services",
+        "items": [
+          { "label": "web_development", "href": "/services#web" },
+          { "label": "mobile_development", "href": "/services#mobile" },
+          { "label": "media_management", "href": "/services#media" }
+        ]
+      },
+      {
+        "title": "company",
+        "items": [
+          { "label": "about", "href": "/about" },
+          { "label": "clients", "href": "/clients" },
+          { "label": "careers", "href": "/careers" },
+          { "label": "blog", "href": "/blog" }
+        ]
+      }
+    ]
+  },
+  "blog": {
+    "categories": [
+      { "label": "all", "value": "all" },
+      { "label": "web", "value": "web" },
+      { "label": "mobile", "value": "mobile" },
+      { "label": "media", "value": "media" }
+    ],
+    "tags": [
+      { "label": "all", "value": "all" },
+      { "label": "web", "value": "web" },
+      { "label": "mobile", "value": "mobile" },
+      { "label": "media", "value": "media" }
+    ]
+  }
+}

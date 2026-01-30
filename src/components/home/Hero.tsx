@@ -1,7 +1,8 @@
 "use client";
 
+import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
-import { IoArrowForward, IoLogoGithub } from "react-icons/io5";
+import { IoArrowForward, IoLayersOutline } from "react-icons/io5";
 import { useTranslations } from 'next-intl';
 
 const Hero = () => {
@@ -42,12 +43,18 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="w-full sm:w-auto bg-primary text-primary-foreground px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-primary/20">
+            <Link 
+              href="/contact"
+              className="w-full sm:w-auto bg-primary text-primary-foreground px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-primary/20"
+            >
               {t('hero_startProject')} <IoArrowForward size={18} />
-            </button>
-            <button className="w-full sm:w-auto bg-foreground/5 hover:bg-foreground/10 text-foreground px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all border border-border">
-              <IoLogoGithub size={20} /> {t('hero_viewPortfolio')}
-            </button>
+            </Link>
+            <Link 
+              href="/services"
+              className="w-full sm:w-auto bg-foreground/5 hover:bg-foreground/10 text-foreground px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all border border-border"
+            >
+              <IoLayersOutline size={20} /> {t('hero_ourServices')}
+            </Link>
           </div>
         </motion.div>
 

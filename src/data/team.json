@@ -2,31 +2,31 @@
   {
     "id": "1",
     "name": "Muhammet İKİZEK",
-    "roleKey": "role_management",
+    "roleKey": "management",
     "image": "/team/member1.png"
   },
   {
     "id": "2",
     "name": "Firdavs SHARIPOV",
-    "roleKey": "role_head_dev",
+    "roleKey": "head_of_development",
     "image": "/team/member2.png"
   },
   {
     "id": "4",
     "name": "Erdinç ÖZTAŞ",
-    "roleKey": "role_dev",
+    "roleKey": "development",
     "image": "/team/member4.png"
   },
   {
     "id": "5",
     "name": "Raşit KILIÇ",
-    "roleKey": "role_dev",
+    "roleKey": "development",
     "image": "/team/member5.png"
   },
   {
     "id": "7",
     "name": "Furkan ÇELİK",
-    "roleKey": "role_design",
+    "roleKey": "design",
     "image": "/team/member7.png"
   }
 ]

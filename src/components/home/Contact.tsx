@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { IoSendOutline, IoCheckmarkCircleOutline, IoAlertCircleOutline } from 'react-icons/io5';
+import { siteConfig } from '@/config/site';
 
 const Contact = () => {
   const t = useTranslations();
@@ -69,11 +70,11 @@ const Contact = () => {
           <div className="grid grid-cols-2 gap-8 mb-12">
             <div>
               <div className="text-primary font-black text-4xl mb-2">99.9%</div>
-              <div className="text-xs uppercase tracking-widest font-bold text-foreground/40">Uptime Reliability</div>
+              <div className="text-xs uppercase tracking-widest font-bold text-foreground/40">{t('contact_reliability')}</div>
             </div>
             <div>
               <div className="text-primary font-black text-4xl mb-2">24/7</div>
-              <div className="text-xs uppercase tracking-widest font-bold text-foreground/40">Technical Support</div>
+              <div className="text-xs uppercase tracking-widest font-bold text-foreground/40">{t('contact_support')}</div>
             </div>
           </div>
 
@@ -82,8 +83,8 @@ const Contact = () => {
                 <IoSendOutline size={24} />
              </div>
              <div>
-                <div className="text-sm font-black uppercase tracking-widest text-foreground/40 mb-1">Direct Line</div>
-                <div className="text-lg font-bold">hello@2zek.com</div>
+                <div className="text-sm font-black uppercase tracking-widest text-foreground/40 mb-1">{t('contact_direct_line')}</div>
+                <div className="text-lg font-bold">{siteConfig.contact.email}</div>
              </div>
           </div>
         </motion.div>
@@ -104,7 +105,7 @@ const Contact = () => {
                   required
                   name="name"
                   type="text"
-                  placeholder="John Doe"
+                  placeholder={t('contact_name_placeholder')}
                   className="w-full bg-foreground/[0.03] border border-border rounded-2xl px-6 py-4 outline-none focus:border-primary/50 transition-colors font-medium"
                 />
               </div>
@@ -114,7 +115,7 @@ const Contact = () => {
                   required
                   name="email"
                   type="email"
-                  placeholder="john@example.com"
+                  placeholder={t('contact_email_placeholder')}
                   className="w-full bg-foreground/[0.03] border border-border rounded-2xl px-6 py-4 outline-none focus:border-primary/50 transition-colors font-medium"
                 />
               </div>
@@ -126,7 +127,7 @@ const Contact = () => {
                 <input
                   name="company"
                   type="text"
-                  placeholder="Inc. / Startup X"
+                  placeholder={t('contact_company_placeholder')}
                   className="w-full bg-foreground/[0.03] border border-border rounded-2xl px-6 py-4 outline-none focus:border-primary/50 transition-colors font-medium"
                 />
               </div>
@@ -150,7 +151,7 @@ const Contact = () => {
                 required
                 name="message"
                 rows={4}
-                placeholder="..."
+                placeholder={t('contact_message_placeholder')}
                 className="w-full bg-foreground/[0.03] border border-border rounded-2xl px-6 py-4 outline-none focus:border-primary/50 transition-colors font-medium resize-none"
               ></textarea>
             </div>

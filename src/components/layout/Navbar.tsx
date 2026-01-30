@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from '@/i18n/routing';
-import { IoMenu, IoClose, IoLogoGithub, IoMoon, IoSunny, IoGlobeOutline } from "react-icons/io5";
+import { IoMenu, IoClose, IoMoon, IoSunny, IoGlobeOutline } from "react-icons/io5";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { useTranslations, useLocale } from 'next-intl';
@@ -89,13 +89,6 @@ const Navbar = () => {
             {theme === "dark" ? <IoSunny size={20} /> : <IoMoon size={20} />}
           </button>
           
-          <Link
-            href="https://github.com/2zek"
-            target="_blank"
-            className="p-2 text-foreground/60 hover:text-primary transition-colors"
-          >
-            <IoLogoGithub size={20} />
-          </Link>
           <Link
             href={pathname === '/' ? "#contact" : "/contact"}
             className="bg-primary text-primary-foreground px-5 py-2 rounded-full text-sm font-bold hover:opacity-90 transition-all"

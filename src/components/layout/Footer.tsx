@@ -1,76 +1,98 @@
-"use client";
-
 import Link from "next/link";
-import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin, IoLogoInstagram } from "react-icons/io5";
-import { useTranslations } from 'next-intl';
-import LogoIcon from '@/components/ui/LogoIcon';
+import { getTranslations, getLocale } from 'next-intl/server';
 import Brand from '@/components/ui/Brand';
+import { siteConfig, socialIconMap } from "@/config/site";
+import { getSortedPostsData } from '@/lib/blog';
 
-const Footer = () => {
-  const t = useTranslations();
+const Footer = async () => {
+  const t = await getTranslations();
+  const locale = await getLocale();
+  const latestPosts = await getSortedPostsData(locale);
+  const footerPosts = latestPosts.slice(0, 4);
 
   return (
     <footer className="py-24 border-t border-border bg-[#0a0a0a] dark relative overflow-hidden text-foreground/60">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-12 md:gap-8 mb-20">
-          <div className="col-span-2">
+        <div className="grid grid-cols-2 md:grid-cols-12 gap-12 md:gap-8 mb-16">
+          <div className="col-span-2 md:col-span-4">
             <Brand size={48} className="mb-6 w-fit text-foreground/60" rotateOnHover={true} />
             <p className="text-sm text-foreground/60 max-w-xs font-medium leading-relaxed mb-8">
               {t('footer_description')}
             </p>
             <div className="flex gap-4">
-              {[IoLogoTwitter, IoLogoGithub, IoLogoLinkedin, IoLogoInstagram].map((Icon, i) => (
-                <Link key={i} href="#" className="text-foreground/40 hover:text-primary transition-colors">
-                  <Icon size={20} />
-                </Link>
-              ))}
+              {siteConfig.socials.map((social, i) => {
+                const Icon = socialIconMap[social.icon.toLowerCase()];
+                if (!Icon) return null;
+                return (
+                  <Link 
+                    key={i} 
+                    href={social.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-foreground/40 hover:text-primary transition-colors"
+                    title={social.platform}
+                  >
+                    <Icon size={20} />
+                  </Link>
+                );
+              })}
             </div>
           </div>
 
-          <div>
-            <h4 className="text-[11px] font-black uppercase tracking-widest text-foreground/40 mb-6">{t('footer_product')}</h4>
-            <ul className="space-y-4 text-sm font-medium text-foreground/60">
-              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_digitalBridge')}</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_saasEcosystem')}</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_ecommerce')}</Link></li>
-            </ul>
-          </div>
+          {siteConfig.footer.menus.map((menu) => (
+            <div key={menu.title} className={menu.title === 'company' ? "col-span-1 md:col-span-1" : "col-span-1 md:col-span-2"}>
+              <h4 className="text-[11px] font-black uppercase tracking-widest text-foreground/40 mb-6">{t(menu.title)}</h4>
+              <ul className="space-y-4 text-sm font-medium text-foreground/60">
+                {menu.items.map((item) => (
+                  <li key={item.label}>
+                    {item.external ? (
+                      <a 
+                        href={item.href} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:text-primary transition-colors inline-flex items-center gap-1.5"
+                      >
+                        {t(item.label)}
+                      </a>
+                    ) : (
+                      <Link href={item.href} className="hover:text-primary transition-colors">
+                        {t(item.label)}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
 
-          <div>
-            <h4 className="text-[11px] font-black uppercase tracking-widest text-foreground/40 mb-6">{t('footer_services')}</h4>
+          <div className="col-span-1 md:col-span-3">
+            <h4 className="text-[11px] font-black uppercase tracking-widest text-foreground/40 mb-6">{t('footer_latestPosts')}</h4>
             <ul className="space-y-4 text-sm font-medium text-foreground/60">
-              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_webDev')}</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_mobileDev')}</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_mediaManagement')}</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-[11px] font-black uppercase tracking-widest text-foreground/40 mb-6">{t('footer_company')}</h4>
-            <ul className="space-y-4 text-sm font-medium text-foreground/60">
-              <li><Link href="#" className="hover:text-primary transition-colors">{t('about')}</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">{t('clients')}</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">{t('careers')}</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">{t('blog')}</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-[11px] font-black uppercase tracking-widest text-foreground/40 mb-6">{t('footer_legal')}</h4>
-            <ul className="space-y-4 text-sm font-medium text-foreground/60">
-              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_privacy')}</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">{t('footer_terms')}</Link></li>
+              {footerPosts.map((post) => (
+                <li key={post.slug}>
+                  <Link 
+                    href={`/blog/${post.slug}`} 
+                    className="hover:text-primary transition-all duration-300 line-clamp-2 leading-snug"
+                  >
+                    {post.title}
+                  </Link>
+                </li>
+              ))}
+              {footerPosts.length === 0 && (
+                <li><Link href="/blog" className="hover:text-primary transition-colors">{t('blog')}</Link></li>
+              )}
             </ul>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-border gap-6">
-          <div className="text-[11px] font-bold text-foreground/40">
-            © {new Date().getFullYear()} {t('footer_copyright')}
+        <div className="flex flex-col md:flex-row items-center justify-between pt-10 border-t border-border gap-6">
+          <div className="text-sm font-medium text-foreground/40">
+            © {new Date().getFullYear()} {siteConfig.branding.name}. {t('copyright')}
           </div>
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-[11px] font-bold text-foreground/40 tracking-widest uppercase">{t('footer_status')}</span>
+          <div className="flex items-center gap-8">
+            <Link href="/privacy" className="text-sm font-medium text-foreground/40 hover:text-primary transition-colors">{t('privacy')}</Link>
+            <Link href="/terms" className="text-sm font-medium text-foreground/40 hover:text-primary transition-colors">{t('terms')}</Link>
+            <Link href="/sitemap" className="text-sm font-medium text-foreground/40 hover:text-primary transition-colors">{t('sitemap')}</Link>
           </div>
         </div>
       </div>
