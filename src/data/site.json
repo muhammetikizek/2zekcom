@@ -34,25 +34,18 @@
   "footer": {
     "menus": [
       {
-        "title": "products",
-        "items": [
-          { "label": "taraftaro", "href": "https://taraftaro.com", "external": true }
-        ]
-      },
-      {
         "title": "services",
         "items": [
           { "label": "web_development", "href": "/services#web" },
           { "label": "mobile_development", "href": "/services#mobile" },
-          { "label": "media_management", "href": "/services#media" }
+          { "label": "contact_type_devops", "href": "/services#devops" }
         ]
       },
       {
         "title": "company",
         "items": [
-          { "label": "about", "href": "/about" },
+          { "label": "about_us", "href": "/about" },
           { "label": "clients", "href": "/clients" },
-          { "label": "careers", "href": "/careers" },
           { "label": "blog", "href": "/blog" }
         ]
       }

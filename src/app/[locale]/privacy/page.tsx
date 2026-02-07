@@ -19,27 +19,29 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
 }
 
 export default async function PrivacyPage() {
+  const t = await getTranslations();
+
   return (
     <main className="pt-48 pb-32 px-6">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-16 leading-tight">
-          Gizlilik<br />
-          <span className="text-primary">Politikası</span>
+          {t('privacy_page.title_main')}<br />
+          <span className="text-primary">{t('privacy_page.title_sub')}</span>
         </h1>
         <div className="prose prose-invert prose-lg max-w-none text-foreground/60 font-medium leading-relaxed space-y-8">
           <p>
-            2zek olarak gizliliğinize önem veriyoruz. Bu metin, verilerinizin nasıl işlendiğini açıklar.
+            {t('privacy_page.intro')}
           </p>
-          <h2 className="text-2xl font-bold text-foreground">1. Veri Toplama</h2>
+          <h2 className="text-2xl font-bold text-foreground">{t('privacy_page.section1_title')}</h2>
           <p>
-            İletişim formları aracılığıyla paylaştığınız isim ve e-posta adresi gibi bilgiler, yalnızca size geri dönüş yapmak amacıyla saklanır.
+            {t('privacy_page.section1_text')}
           </p>
-          <h2 className="text-2xl font-bold text-foreground">2. Çerezler</h2>
+          <h2 className="text-2xl font-bold text-foreground">{t('privacy_page.section2_title')}</h2>
           <p>
-            Sitemizde kullanıcı deneyimini iyileştirmek için anonim analiz çerezleri kullanılmaktadır.
+            {t('privacy_page.section2_text')}
           </p>
           <p className="pt-8 text-sm italic">
-            Son güncelleme: 31 Ocak 2026
+            {t('last_updated')}
           </p>
         </div>
       </div>

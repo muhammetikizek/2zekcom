@@ -111,6 +111,7 @@
   "footer_latestPosts": "Son Yazılar",
   "privacy": "Gizlilik",
   "terms": "Şartlar",
+  "cookies": "Çerez Politikası",
   "sitemap": "Site Haritası",
   "copyright": "Tüm hakları saklıdır.",
   "about_title": "Biz kimiz?",
@@ -132,5 +133,39 @@
   "hr": "İnsan Kaynakları (Human Resources)",
   "development": "Geliştirme (Development)",
   "design": "Tasarım (Design)",
-  "studio_manager": "Stüdyo Müdürü (Studio Manager)"
+  "studio_manager": "Stüdyo Müdürü (Studio Manager)",
+  "privacy_page": {
+    "title_main": "Gizlilik",
+    "title_sub": "Politikası",
+    "intro": "2zek olarak gizliliğinize önem veriyoruz. Bu metin, verilerinizin nasıl işlendiğini açıklar.",
+    "section1_title": "1. Veri Toplama",
+    "section1_text": "İletişim formları aracılığıyla paylaştığınız isim ve e-posta adresi gibi bilgiler, yalnızca size geri dönüş yapmak amacıyla saklanır.",
+    "section2_title": "2. Çerezler",
+    "section2_text": "Sitemizde kullanıcı deneyimini iyileştirmek için anonim analiz çerezleri kullanılmaktadır."
+  },
+  "terms_page": {
+    "title_main": "Kullanım",
+    "title_sub": "Şartları",
+    "intro": "2zek web sitesini kullanarak aşağıdaki şartları kabul etmiş sayılırsınız.",
+    "section1_title": "1. Fikri Mülkiyet",
+    "section1_text": "Bu sitede paylaşılan tüm içerik ve görseller 2zek'e aittir veya izne tabidir.",
+    "section2_title": "2. Hizmet Kapsamı",
+    "section2_text": "Web sitemiz üzerinden sunulan bilgiler genel bilgilendirme amaçlıdır."
+  },
+  "cookies_page": {
+    "title_main": "Çerez",
+    "title_sub": "Politikası",
+    "intro": "Bu politika, web sitemizde hangi çerezlerin neden kullanıldığını açıklar.",
+    "section1_title": "1. Çerez Nedir?",
+    "section1_text": "Çerezler, ziyaret ettiğiniz web siteleri tarafından bilgisayarınıza yerleştirilen küçük metin dosyalarıdır.",
+    "section2_title": "2. Kullanım Amacı",
+    "section2_text": "Çerezleri, sitemizin temel işlevlerini yerine getirmek ve trafik analizi yapmak için kullanıyoruz."
+  },
+  "cookies_consent": {
+    "message": "Size daha iyi bir deneyim sunmak için çerezleri kullanıyoruz.",
+    "accept": "Hepsine İzin Ver",
+    "decline": "Reddet",
+    "more": "Daha Fazla Bilgi"
+  },
+  "last_updated": "Son güncelleme: 7 Şubat 2026"
 }

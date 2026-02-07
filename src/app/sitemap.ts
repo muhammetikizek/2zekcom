@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog',
     '/privacy',
     '/terms',
+    '/cookies',
     '/contact',
   ];
 

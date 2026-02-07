@@ -29,6 +29,7 @@ export const metadata: Metadata = {
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import CookieConsent from "@/components/layout/CookieConsent";
 
 export default async function RootLayout({
   children,
@@ -63,6 +64,7 @@ export default async function RootLayout({
             <Navbar />
             <main className="relative">{children}</main>
             <Footer />
+            <CookieConsent />
           </ThemeProvider>
         </NextIntlClientProvider>
         <Script

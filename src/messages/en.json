@@ -108,6 +108,7 @@
   "footer_latestPosts": "Latest Posts",
   "privacy": "Privacy",
   "terms": "Terms",
+  "cookies": "Cookie Policy",
   "sitemap": "Sitemap",
   "copyright": "All rights reserved.",
   "about_title": "Who we are?",
@@ -129,5 +130,39 @@
   "hr": "Human Resources",
   "development": "Development",
   "design": "Design",
-  "studio_manager": "Studio Manager"
+  "studio_manager": "Studio Manager",
+  "privacy_page": {
+    "title_main": "Privacy",
+    "title_sub": "Policy",
+    "intro": "At 2zek, we value your privacy. This text explains how your data is processed.",
+    "section1_title": "1. Data Collection",
+    "section1_text": "Information such as name and e-mail address that you share through contact forms is only stored for the purpose of getting back to you.",
+    "section2_title": "2. Cookies",
+    "section2_text": "Anonymous analysis cookies are used on our site to improve the user experience."
+  },
+  "terms_page": {
+    "title_main": "Terms of",
+    "title_sub": "Service",
+    "intro": "By using the 2zek website, you agree to the following terms.",
+    "section1_title": "1. Intellectual Property",
+    "section1_text": "All content and images shared on this site belong to 2zek or are subject to permission.",
+    "section2_title": "2. Scope of Service",
+    "section2_text": "The information provided through our website is for general informational purposes."
+  },
+  "cookies_page": {
+    "title_main": "Cookie",
+    "title_sub": "Policy",
+    "intro": "This policy explains what cookies are used on our website and why.",
+    "section1_title": "1. What are Cookies?",
+    "section1_text": "Cookies are small text files placed on your computer by the websites you visit.",
+    "section2_title": "2. Purpose of Use",
+    "section2_text": "We use cookies to perform the basic functions of our site and to analyze visitor traffic."
+  },
+  "cookies_consent": {
+    "message": "We use cookies to provide you with a better experience.",
+    "accept": "Accept All",
+    "decline": "Decline",
+    "more": "Learn More"
+  },
+  "last_updated": "Last updated: February 7, 2026"
 }
