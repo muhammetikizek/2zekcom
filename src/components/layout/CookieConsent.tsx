@@ -36,7 +36,7 @@ const CookieConsent = () => {
           exit={{ y: 100, opacity: 0 }}
           className="fixed bottom-6 left-6 right-6 md:left-auto md:right-8 md:max-w-md z-50"
         >
-          <div className="glass p-8 rounded-[32px] border border-primary/20 shadow-2xl shadow-primary/10 relative overflow-hidden group">
+          <div className="bg-background/95 backdrop-blur-xl p-8 rounded-[32px] border border-primary/20 shadow-2xl shadow-primary/10 relative overflow-hidden group">
             <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-4">

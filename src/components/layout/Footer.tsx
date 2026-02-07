@@ -44,9 +44,15 @@ const Footer = async () => {
         <div className="grid grid-cols-2 md:grid-cols-12 gap-12 md:gap-8 mb-24">
           <div className="col-span-2 md:col-span-4">
             <Brand size={44} className="mb-8 w-fit text-foreground/60" rotateOnHover={true} />
-            <p className="text-base text-foreground/50 max-w-sm font-medium leading-relaxed mb-10">
+            <p className="text-base text-foreground/50 max-w-sm font-medium leading-relaxed mb-6">
               {t('footer_description')}
             </p>
+            <a 
+              href={`mailto:${siteConfig.contact.email}`}
+              className="inline-block text-sm font-bold text-foreground/40 hover:text-primary transition-colors mb-10"
+            >
+              {siteConfig.contact.email}
+            </a>
             <div className="flex gap-3">
               {siteConfig.socials.map((social, i) => {
                 const Icon = socialIconMap[social.icon.toLowerCase()];
