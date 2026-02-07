@@ -1,9 +1,11 @@
 {
+  "home": "Home",
   "services": "Services",
   "clients": "Clients",
   "client": "Client",
   "contact": "Contact",
   "about": "About",
+  "about_us": "About Us",
   "team": "Team",
   "products": "Products",
   "blog": "Blog",

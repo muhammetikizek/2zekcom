@@ -19,17 +19,19 @@ export async function generateMetadata({ params }: SitemapPageProps): Promise<Me
 }
 
 export default async function SitemapPage() {
+  const t = await getTranslations();
+
   const pages = [
-    { name: "Ana Sayfa", href: "/" },
-    { name: "Hakkımızda", href: "/about" },
-    { name: "Hizmetler", href: "/services" },
-    { name: "Portfolyo", href: "/portfolio" },
-    { name: "Blog", href: "/blog" },
-    { name: "Ekip", href: "/team" },
-    { name: "Müşteriler", href: "/clients" },
-    { name: "İletişim", href: "/contact" },
-    { name: "Gizlilik Politikası", href: "/privacy" },
-    { name: "Kullanım Şartları", href: "/terms" },
+    { name: t('home'), href: "/" },
+    { name: t('about_us'), href: "/about" },
+    { name: t('services'), href: "/services" },
+    { name: t('portfolio'), href: "/#portfolio" },
+    { name: t('blog'), href: "/blog" },
+    { name: t('team'), href: "/team" },
+    { name: t('clients'), href: "/clients" },
+    { name: t('contact'), href: "/contact" },
+    { name: t('privacy'), href: "/privacy" },
+    { name: t('terms'), href: "/terms" },
   ];
 
   return (

@@ -59,15 +59,20 @@ const Navbar = () => {
         {/* Desktop Menu - Centered */}
         <div className="hidden md:flex flex-1 justify-center">
           <div className="flex items-center gap-8">
-            {menuItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium text-foreground/60 hover:text-primary transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
+            {menuItems.map((item) => {
+              const isActive = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`text-sm font-medium transition-colors ${
+                    isActive ? "text-primary" : "text-foreground/60 hover:text-primary"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
           </div>
         </div>
         
@@ -109,16 +114,21 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-background border-b border-border p-6 flex flex-col gap-4 animate-in fade-in slide-in-from-top-4">
-          {menuItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-lg font-medium text-foreground/60 hover:text-primary"
-              onClick={() => setIsOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
+          {menuItems.map((item) => {
+            const isActive = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`text-lg font-medium ${
+                  isActive ? "text-primary" : "text-foreground/60 hover:text-primary"
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
           
           <div className="flex items-center justify-between border-t border-border pt-4">
             <button
