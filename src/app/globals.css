@@ -4,7 +4,7 @@
 :root {
   --background: #ffffff;
   --foreground: #09090b;
-  --primary: #5256a6;
+  --primary: oklch(68.5% 0.169 237.323);
   --primary-foreground: #ffffff;
   --border: #e4e4e7;
 }
@@ -27,7 +27,7 @@
 .dark {
   --background: #0a0a0a;
   --foreground: #fafafa;
-  --primary: #5256a6;
+  --primary: oklch(68.5% 0.169 237.323);
   --border: #27272a;
 }
 
@@ -35,7 +35,7 @@
   :root:not(.light) {
     --background: #0a0a0a;
     --foreground: #fafafa;
-    --primary: #5256a6;
+    --primary: oklch(68.5% 0.169 237.323);
     --border: #27272a;
   }
 }
