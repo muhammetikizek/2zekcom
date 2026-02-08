@@ -7,9 +7,10 @@ export async function POST(req: Request) {
 
     const botToken = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;
+    const threadId = process.env.TELEGRAM_THREAD_ID;
 
     if (!botToken || !chatId) {
-      console.error('Telegram keys are missing');
+      console.error('Telegram keys are missing in environment variables');
       return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
     }
 
@@ -32,13 +33,16 @@ ${message}
       },
       body: JSON.stringify({
         chat_id: chatId,
+        message_thread_id: threadId ? parseInt(threadId) : undefined,
         text: text,
         parse_mode: 'Markdown',
       }),
     });
 
     if (!response.ok) {
-      throw new Error('Telegram API error');
+      const errorData = await response.json();
+      console.error('Telegram API error details:', errorData);
+      throw new Error(`Telegram API error: ${errorData.description || response.statusText}`);
     }
 
     return NextResponse.json({ success: true });
