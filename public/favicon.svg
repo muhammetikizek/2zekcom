@@ -19,5 +19,5 @@
     </mask>
   </defs>
   <!-- Yeşil daire, mask uygulanmış (2 şekilleri kesilmiş) -->
-  <circle cx="750" cy="750" r="725" fill="oklch(68.5% 0.169 237.323)" mask="url(#logo-mask)"/>
+  <circle cx="750" cy="750" r="725" fill="#5991ea" mask="url(#logo-mask)"/>
 </svg>
