@@ -15,14 +15,14 @@ export async function POST(req: Request) {
     }
 
     const text = `
-🚀 *Yeni Proje Talebi*
+*New Project Request*
 
-👤 *Ad Soyad:* ${name}
-📧 *E-posta:* ${email}
-🏢 *Şirket/Proje:* ${company}
-🛠 *Tip:* ${type}
+*Name:* ${name}
+*Email:* ${email}
+*Company/Project:* ${company}
+*Type:* ${type}
 
-📝 *Mesaj:*
+*Message:*
 ${message}
     `;
 
@@ -46,7 +46,7 @@ ${message}
     }
 
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Contact API error:', error);
     return NextResponse.json({ error: 'Failed to send message' }, { status: 500 });
   }
