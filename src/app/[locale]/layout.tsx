@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { ThemeProvider } from "next-themes";
@@ -17,15 +18,59 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "2ZEK | Visionary Digital Bridge",
-  description: "Next-generation digital solutions for global scale.",
-  icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/logo.svg",
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "" });
+
+  return {
+    title: t("metadata_title"),
+    description: t("metadata_description"),
+    keywords: t("metadata_keywords"),
+    metadataBase: new URL("https://2zek.com"),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        en: "/en",
+        tr: "/tr",
+      },
+    },
+    openGraph: {
+      title: t("metadata_title"),
+      description: t("metadata_description"),
+      url: "https://2zek.com",
+      siteName: "2zek",
+      locale: locale === "tr" ? "tr_TR" : "en_US",
+      type: "website",
+      images: [
+        {
+          url: "/logo.svg",
+          width: 1200,
+          height: 630,
+          alt: "2zek Logo",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("metadata_title"),
+      description: t("metadata_description"),
+      images: ["/logo.svg"],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    icons: {
+      icon: "/favicon.svg",
+      shortcut: "/favicon.svg",
+      apple: "/logo.svg",
+    },
+  };
+}
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
