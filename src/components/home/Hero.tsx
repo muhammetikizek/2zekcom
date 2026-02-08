@@ -4,6 +4,7 @@ import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
 import { IoArrowForward, IoLayersOutline } from "react-icons/io5";
 import { useTranslations } from 'next-intl';
+import Image from "next/image";
 
 const Hero = () => {
   const t = useTranslations();
@@ -12,9 +13,12 @@ const Hero = () => {
     <section className="relative min-h-screen pt-32 pb-20 flex flex-col items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-overlay"
-          style={{ backgroundImage: 'url("/images/hero_bg.png")' }}
+        <Image 
+          src="/images/hero_bg.png"
+          alt="Hero Background"
+          fill
+          priority
+          className="object-cover object-center opacity-40 mix-blend-overlay"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
       </div>

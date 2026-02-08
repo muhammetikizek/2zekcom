@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { IoCodeSlash, IoGlobe, IoPhonePortrait, IoShareSocial, IoCart, IoLayers } from "react-icons/io5";
 import { useTranslations } from 'next-intl';
+import Image from "next/image";
 
 const BentoGrid = () => {
   const t = useTranslations();
@@ -80,9 +81,12 @@ const BentoGrid = () => {
               {/* Background Image for Cards */}
               {service.image && (
                 <div className="absolute inset-0 z-0">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-20 grayscale group-hover:grayscale-0 group-hover:opacity-40"
-                    style={{ backgroundImage: `url("${service.image}")` }}
+                  <Image 
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-110 opacity-20 grayscale group-hover:grayscale-0 group-hover:opacity-40"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
                 </div>
