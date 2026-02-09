@@ -18,6 +18,8 @@ const Hero = () => {
           alt="Hero Background"
           fill
           priority
+          sizes="100vw"
+          quality={75}
           className="object-cover object-center opacity-40 mix-blend-overlay"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
@@ -30,9 +32,9 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
         >
           {/* Heading */}
           <h1 className="text-5xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.9]">
@@ -64,9 +66,9 @@ const Hero = () => {
 
         {/* Floating Code Visual Concept (Supabase style) */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
           className="mt-24 relative"
         >
           <div className="relative mx-auto max-w-4xl rounded-3xl border border-border bg-background/50 backdrop-blur-xl p-4 shadow-2xl overflow-hidden aspect-video group">

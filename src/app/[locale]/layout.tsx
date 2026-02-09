@@ -93,6 +93,14 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <link
+          rel="preload"
+          href="/images/hero_bg.png"
+          as="image"
+          type="image/png"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
